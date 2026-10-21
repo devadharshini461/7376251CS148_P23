@@ -1,15 +1,6 @@
 Name           : Devadharshini S
 Register No    : 7376251IT148
 Project        : P23 - Hostel Room Allocation
-Training       : AIXcelerate 2026, Python Programming Projects (Level 2)
-
-HOW TO RUN
-1. Install Python 3 (no other software or library is needed).
-2. Open a terminal in this folder.
-3. Type:  python main.py
-   (use python3 main.py if your system needs it)
-The program shows a text menu and runs until you choose 0 (Exit).
-The program uses no import statements.
 
 FILES IN THIS FOLDER
 main.py          the complete program
@@ -41,9 +32,6 @@ BONUS FEATURES DONE
   When a bed becomes free (vacate, transfer or new room) the waiting students
   are allotted automatically, first years first, and students of the same year
   in the order they joined.
-
-BONUS FEATURES NOT DONE
-- Mess fee calculation.
 
 NOTES
 - Data is saved to the text files after every change.
