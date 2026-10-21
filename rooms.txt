@@ -1,0 +1,12 @@
+A-101|A|1|Single|1
+A-102|A|1|Double|2
+A-201|A|2|Double|2
+A-202|A|2|Triple|3
+B-101|B|1|Single|1
+B-102|B|1|Double|2
+B-201|B|2|Double|2
+B-202|B|2|Triple|3
+C-101|C|1|Double|2
+C-102|C|1|Triple|3
+C-201|C|2|Triple|3
+C-202|C|2|Single|1

@@ -1,0 +1,665 @@
+SAMPLE RUN - P23 Hostel Room Allocation
+Name: Devadharshini S   Register No: 7376251IT148
+Command used: python main.py   (started with the sample data files in this folder)
+Everything after 'Enter your choice:' or a prompt on the same line is what was typed.
+------------------------------------------------------------
+SESSION 1 - all features, with wrong inputs
+------------------------------------------------------------
+Loaded 12 rooms, 22 allotments and 0 students on the waiting list.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 5
+
+--- Vacancies and occupancy ---
+  Block    Single  Double  Triple   Free   Beds   Occupancy
+  A             0       0       2      2      8       75.0%
+  B             0       1       0      1      8       87.5%
+  C             0       0       0      0      9      100.0%
+
+  Vacancies - Block A: 2 beds | Block B: 1 beds | Block C: 0 beds
+  Occupancy - Block A: 75.0% | Block B: 87.5% | Block C: 100.0%
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 6
+
+--- Search a student ---
+Register number: 7376252AL118
+  Vishal R (II year) - Room A-201, Block A, Floor 2 (Double)
+  Roommate: Sanjay P (II year)
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 2
+
+--- Allot a student ---
+Register number: ab|c
+  The | character is not allowed. Please try again.
+Register number: 7376261CS201
+Student name: Meena K
+Year (I / II / III / IV): 1
+Preferred block (press Enter for any): a
+Preferred type (press Enter for any): triple
+  Meena K allotted to room A-202 (Block A, floor 2, Triple).
+  Preference matched.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 2
+
+--- Allot a student ---
+Register number: 7376261CS201
+  Meena K already has a bed in room A-202. One student cannot get two rooms.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 2
+
+--- Allot a student ---
+Register number: 7376261IT202
+Student name: Harini S
+Year (I / II / III / IV): I
+Preferred block (press Enter for any): c
+Preferred type (press Enter for any): double
+  Harini S allotted to room B-201 (Block B, floor 2, Double).
+  Preferred type given, but no free bed in the preferred block.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 1
+
+--- Add a room ---
+Room number (example A-204): B-201
+  That room number already exists.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 1
+
+--- Add a room ---
+Room number (example A-204): d-101
+Block (example A): 12
+  Block must be letters only, for example A.
+Block (example A): D
+Floor (0 to 10): 15
+  The number must be between 0 and 10.
+Floor (0 to 10): abc
+  Please enter a whole number.
+Floor (0 to 10): 1
+Type (Single / Double / Triple): quad
+  Type must be Single, Double or Triple.
+Type (Single / Double / Triple): double
+Capacity (1 to 2): 3
+  The number must be between 1 and 2.
+Capacity (1 to 2): 2
+  Room D-101 added in Block D, floor 1 (Double, 2 beds).
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 4
+
+--- Transfer a student ---
+Register number: 7376261IT202
+  Harini S is now in room B-201.
+  Rooms with a free bed:
+    A-202  Block A  Floor 2  Triple  free beds: 1
+    D-101  Block D  Floor 1  Double  free beds: 2
+Move to room number: Z-999
+  That room does not exist.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 4
+
+--- Transfer a student ---
+Register number: 7376261IT202
+  Harini S is now in room B-201.
+  Rooms with a free bed:
+    A-202  Block A  Floor 2  Triple  free beds: 1
+    D-101  Block D  Floor 1  Double  free beds: 2
+Move to room number: D-101
+  Harini S moved from B-201 to D-101.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 5
+
+--- Vacancies and occupancy ---
+  Block    Single  Double  Triple   Free   Beds   Occupancy
+  A             0       0       1      1      8       87.5%
+  B             0       1       0      1      8       87.5%
+  C             0       0       0      0      9      100.0%
+  D             0       1       0      1      2       50.0%
+
+  Vacancies - Block A: 1 beds | Block B: 1 beds | Block C: 0 beds | Block D: 1 beds
+  Occupancy - Block A: 87.5% | Block B: 87.5% | Block C: 100.0% | Block D: 50.0%
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 6
+
+--- Search a student ---
+Register number: 7376261CS201
+  Meena K (I year) - Room A-202, Block A, Floor 2 (Triple)
+  Roommate: Ajay M (I year)
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 2
+
+--- Allot a student ---
+Register number: 7376241ME303
+Student name: Arjun Prasad
+Year (I / II / III / IV): III
+Preferred block (press Enter for any): 
+Preferred type (press Enter for any): 
+  Arjun Prasad allotted to room A-202 (Block A, floor 2, Triple).
+  Preference matched.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 2
+
+--- Allot a student ---
+Register number: 7376251AL404
+Student name: Ganesh Kumar
+Year (I / II / III / IV): 2
+Preferred block (press Enter for any): 
+Preferred type (press Enter for any): 
+  Ganesh Kumar allotted to room B-201 (Block B, floor 2, Double).
+  Preference matched.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 2
+
+--- Allot a student ---
+Register number: 7376251CS505
+Student name: Kavya R
+Year (I / II / III / IV): 2
+Preferred block (press Enter for any): 
+Preferred type (press Enter for any): 
+  Kavya R allotted to room D-101 (Block D, floor 1, Double).
+  Preference matched.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 2
+
+--- Allot a student ---
+Register number: 7376251EC606
+Student name: Nandhini P
+Year (I / II / III / IV): 2
+Preferred block (press Enter for any): b
+Preferred type (press Enter for any): single
+  No free bed in any room right now.
+  Add the student to the waiting list? (y/n): y
+  Nandhini P added to the waiting list (position 1).
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 2
+
+--- Allot a student ---
+Register number: 7376261AD707
+Student name: Sowmiya R
+Year (I / II / III / IV): 1
+Preferred block (press Enter for any): 
+Preferred type (press Enter for any): 
+  No free bed in any room right now.
+  Add the student to the waiting list? (y/n): y
+  Sowmiya R added to the waiting list (position 2).
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 8
+
+--- Waiting list ---
+  Shown in the order beds will be given (first years first):
+  1. Sowmiya R (7376261AD707, I year) - wants block: any, type: any
+  2. Nandhini P (7376251EC606, II year) - wants block: B, type: Single
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 3
+
+--- Vacate a student ---
+Register number: 7376252EC090
+  Sanjay P is in room A-201.
+  Vacate this student? (y/n): n
+  Cancelled. Nothing changed.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 3
+
+--- Vacate a student ---
+Register number: 7376252EC090
+  Sanjay P is in room A-201.
+  Vacate this student? (y/n): y
+  Sanjay P has vacated room A-201.
+  Waiting list: Sowmiya R (7376261AD707, I year) is now allotted room A-201.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 8
+
+--- Waiting list ---
+  Shown in the order beds will be given (first years first):
+  1. Nandhini P (7376251EC606, II year) - wants block: B, type: Single
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 3
+
+--- Vacate a student ---
+Register number: 7376999XX999
+  This student is not allotted to any room.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 6
+
+--- Search a student ---
+Register number: 7376261AD707
+  Sowmiya R (I year) - Room A-201, Block A, Floor 2 (Double)
+  Roommate: Vishal R (II year)
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 7
+
+--- All rooms ---
+  A-101 | Block A | Floor 1 | Single | 1/1 beds filled
+       - Rakesh T (7376232CS114, IV year)
+  A-102 | Block A | Floor 1 | Double | 2/2 beds filled
+       - Vignesh K (7376242AD207, III year)
+       - Prakash S (7376242IT133, III year)
+  A-201 | Block A | Floor 2 | Double | 2/2 beds filled
+       - Vishal R (7376252AL118, II year)
+       - Sowmiya R (7376261AD707, I year)
+  A-202 | Block A | Floor 2 | Triple | 3/3 beds filled
+       - Ajay M (7376261CS052, I year)
+       - Meena K (7376261CS201, I year)
+       - Arjun Prasad (7376241ME303, III year)
+  B-101 | Block B | Floor 1 | Single | 1/1 beds filled
+       - Surya N (7376231ME076, IV year)
+  B-102 | Block B | Floor 1 | Double | 2/2 beds filled
+       - Gokul R (7376251IT061, II year)
+       - Hari V (7376251CS145, II year)
+  B-201 | Block B | Floor 2 | Double | 2/2 beds filled
+       - Dinesh B (7376242EC019, III year)
+       - Ganesh Kumar (7376251AL404, II year)
+  B-202 | Block B | Floor 2 | Triple | 3/3 beds filled
+       - Mohan A (7376261AD033, I year)
+       - Karan D (7376261IT120, I year)
+       - Bala C (7376252CE044, II year)
+  C-101 | Block C | Floor 1 | Double | 2/2 beds filled
+       - Naveen G (7376241CS088, III year)
+       - Yuvan S (7376241AL101, III year)
+  C-102 | Block C | Floor 1 | Triple | 3/3 beds filled
+       - Lokesh P (7376232EC027, IV year)
+       - Pranav J (7376232AD062, IV year)
+       - Sri Ram K (7376242ME050, III year)
+  C-201 | Block C | Floor 2 | Triple | 3/3 beds filled
+       - Arun Kumar V (7376251AL099, II year)
+       - Tharun M (7376261EC074, I year)
+       - Jeeva P (7376261CS110, I year)
+  C-202 | Block C | Floor 2 | Single | 1/1 beds filled
+       - Madhan L (7376231IT038, IV year)
+  D-101 | Block D | Floor 1 | Double | 2/2 beds filled
+       - Harini S (7376261IT202, I year)
+       - Kavya R (7376251CS505, II year)
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: abc
+  Invalid choice. Please enter a number from the menu.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 
+  Invalid choice. Please enter a number from the menu.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 12
+  Invalid choice. Please enter a number from the menu.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 0
+All changes are saved. Goodbye!
+
+------------------------------------------------------------
+SESSION 2 - program started again to show the data was saved and loaded
+------------------------------------------------------------
+Loaded 13 rooms, 27 allotments and 1 students on the waiting list.
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 5
+
+--- Vacancies and occupancy ---
+  Block    Single  Double  Triple   Free   Beds   Occupancy
+  A             0       0       0      0      8      100.0%
+  B             0       0       0      0      8      100.0%
+  C             0       0       0      0      9      100.0%
+  D             0       0       0      0      2      100.0%
+
+  Vacancies - Block A: 0 beds | Block B: 0 beds | Block C: 0 beds | Block D: 0 beds
+  Occupancy - Block A: 100.0% | Block B: 100.0% | Block C: 100.0% | Block D: 100.0%
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 8
+
+--- Waiting list ---
+  Shown in the order beds will be given (first years first):
+  1. Nandhini P (7376251EC606, II year) - wants block: B, type: Single
+
+==========================================
+        HOSTEL ROOM ALLOCATION
+==========================================
+ 1. Add a room
+ 2. Allot a student
+ 3. Vacate a student
+ 4. Transfer a student
+ 5. Vacancies and occupancy by block
+ 6. Search a student
+ 7. View all rooms
+ 8. View waiting list
+ 0. Exit
+Enter your choice: 0
+All changes are saved. Goodbye!
